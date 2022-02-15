@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - VueJS TinyMce Component</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="App">
+  <div class="editor">
+    <vue-mce
+      @init="handleInit"
+      @destroy="handleDestroy"
+      @change="handleChange"
+      @input="handleInput"
+      @error="handleError"
+      v-model="output"
+      :config="config"
+      name="qwerty"
+      ref="ref"
+    />
+  </div>
+  <div class="output">
+    <h3 class="output__title">Output:</h3>
+    <div v-html="output"></div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+<script src='https://cloud.tinymce.com/dev/tinymce.min.js?apiKey=qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc'></script>
+<script src='https://cdn.jsdelivr.net/npm/vue-mce@1.5.2/dist/vue-mce.web.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
